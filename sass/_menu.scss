@@ -1,0 +1,60 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+.menu .wrapper {
+    padding-block: 70px;
+}
+
+.menu ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px 30px;
+    @include m.tab {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.menu ul img {
+    width: 350px;
+    height: 250px;
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+.menu h3 {
+    text-align: center;
+}
+
+.menu p {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.menu-detail {
+    display: flex;
+    width: 100%;
+    padding-bottom: 50px;
+    @include m.tab {
+        flex-direction: column;
+    }
+}
+
+.l-menu {
+    width: 55%;
+    @include m.tab {
+        width: 70%;
+    }
+}
+
+.r-menu {
+    width: 45%;
+    @include m.tab {
+        width: 70%;
+    }
+}
+
+.menu-detail h3 {
+    font-size: 24px;
+}

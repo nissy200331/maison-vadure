@@ -1,0 +1,25 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+.shop .wrapper {
+    padding-block: 70px;
+    display: flex;
+    @include m.tab {
+        flex-direction: column;
+    }
+}
+
+.shop-text {
+    width: 45%;
+    padding-inline: 50px 100px;
+    @include m.tab {
+        width: 100%;
+    }
+}
+
+.shop-img {
+    width: 55%;
+    @include m.tab {
+        width: 100%;
+    }
+}
